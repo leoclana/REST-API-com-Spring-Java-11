@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "09c5d2a9-67a3-4efe-8432-9f39bcdd4109",
+		"name": "OS-Works-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "clientes JSON",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clientes XML",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes"
+					]
+				},
+				"description": "Para retornar XML:\r\nIncluir no \"pom.xml\"\r\n<dependency>\r\n\t\t\t<groupId>com.fasterxml.jackson.dataformat</groupId>\r\n\t\t\t<artifactId>jackson-dataformat-xml</artifactId>\r\n\t\t</dependency>\r\n----------------------------------\r\n\r\nE no Header da requisição:\r\nAccept = application/xml\r\n--------------------------"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
