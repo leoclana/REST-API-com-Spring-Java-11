@@ -67,6 +67,150 @@
 				"description": "Para retornar XML:\r\nIncluir no \"pom.xml\"\r\n<dependency>\r\n\t\t\t<groupId>com.fasterxml.jackson.dataformat</groupId>\r\n\t\t\t<artifactId>jackson-dataformat-xml</artifactId>\r\n\t\t</dependency>\r\n----------------------------------\r\n\r\nE no Header da requisição:\r\nAccept = application/xml\r\n--------------------------"
 			},
 			"response": []
+		},
+		{
+			"name": "clientes findById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/clientes/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clientes findNomeContaining",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/clientes/findNomeContaining/i lana",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"findNomeContaining",
+						"i lana"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clientes findNome",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/clientes/findNome/Léo Lana",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"findNome",
+						"Léo Lana"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clientes cadastrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Pipe Lana\",\r\n    \"email\": \"pipeline@estudo.com\",\r\n    \"telefone\": \"(21) 99999-9993\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clientes atualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Pipe Lana\",\r\n    \"email\": \"pipeline@estudo.com\",\r\n    \"telefone\": \"(21) 99999-9993\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/clientes/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"4"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
